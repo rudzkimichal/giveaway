@@ -1,0 +1,42 @@
+
+.stats-container {
+  background: $primary-accent-color url(../../assets/Background-3-Columns.png);
+  background-size: cover;
+  width: 100vw;
+
+  section {
+    width: 90vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 6rem 0;
+
+    article {
+      width: 20%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      & *:not(:first-child) {
+        margin-top: 2rem;
+      }
+
+      .stats-figure {
+        font-size: 6rem;
+        font-weight: 300;
+        color: $secondary-accent-color;
+      }
+
+      .stats-header {
+        text-transform: uppercase;
+      }
+
+      .stats-description {
+        font-family: 'Merriweather', serif;
+        font-weight: 300;
+      }
+    }
+  }
+}

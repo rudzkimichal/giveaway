@@ -12,7 +12,7 @@ const Nav = () => {
       </div>
       <nav>
         <ScrollLink to='start' smooth={true} duration={500}>Start</ScrollLink>
-        <ScrollLink to='oco' smooth={true} duration={500}>O co chodzi?</ScrollLink>
+        <ScrollLink to='steps' smooth={true} duration={500}>O co chodzi?</ScrollLink>
         <ScrollLink to='about' smooth={true} duration={500}>O nas</ScrollLink>
         <ScrollLink to='foundations' smooth={true} duration={500}>Fundacja i organizacje</ScrollLink>
         <ScrollLink to='contact' smooth={true} duration={500}>Kontakt</ScrollLink>

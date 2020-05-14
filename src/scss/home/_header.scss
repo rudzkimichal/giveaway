@@ -5,7 +5,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  height: 1000px;
+  height: 1050px;
 
   & > div {
     width: 50%;
@@ -14,10 +14,8 @@
 }
 
 .hero-img-container {
-  background-image: url(../../assets/Home-Hero-Image.jpg);
+  background: $primary-color url(../../assets/Home-Hero-Image.jpg) no-repeat right;
   background-size: cover;
-  background-repeat: no-repeat;
-  background-position: right;
   align-items: flex-start;
 }
 
@@ -67,7 +65,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    margin-top: 6rem;
+    margin-top: 12rem;
 
     & * {
       margin-top: 2rem;
