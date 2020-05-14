@@ -1,18 +1,11 @@
 import React from 'react';
 import {HashRouter, Route, Switch} from 'react-router-dom';
-import './scss/main.scss';
-import Home from './components/Home';
+import Home from './components/home/Home';
 import Login from './components/Login';
 import Form from './components/Form';
 import Register from './components/Register';
 import Logout from './components/Logout';
-
-
-
-
-const NotFound = () => {
-  return '404: Content not found';
-}
+import NotFound from './components/NotFound';
 
 const App = () => {
   return (

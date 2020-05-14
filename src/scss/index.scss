@@ -2,7 +2,9 @@
 @import './settings/reset.scss';
 @import './settings/fonts.scss';
 @import './settings/colors.scss';
+@import './home/header.scss';
 
 body {
   font-family: $font-base;
+  color: $primary-text-color;
 }
