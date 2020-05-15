@@ -74,21 +74,21 @@
     h1 {
       font-size: 2rem;
       text-align: center;
-      font-weight: 300;
-      line-height: 1.25em;
+        font-weight: 300;
+        line-height: 1.25em;
     }
 
     div {
       width: 100%;
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
 
       & * {
         text-transform: uppercase;
         font-weight: 300;
         font-size: 2rem;
         padding: 1rem;
-        width: 33.333%;
+        width: 40%;
         background: transparent;
         border: 0.75px solid $primary-text-color;
         font-family: $font-base;
