@@ -9,7 +9,7 @@ import Icon4 from '../../assets/Icon-4.svg';
 
 const Steps = () => {
   return (
-    <div id='steps' className='steps-container'>
+    <div id='steps'>
       <h2>Wystarczą 4 proste kroki</h2>
       <Divider />
       <div className='instruction-container'>
