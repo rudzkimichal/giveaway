@@ -1,0 +1,113 @@
+
+{
+   "foundations":[
+      {
+         "name":"Fundacjom",
+         "desc":"W naszej bazie znajdziesz listę zweryfikowanych Fundacji, z którymi współpracujemy. Możesz sprawdzić czym się zajmują, komu pomagają i czego potrzebują.",
+         "items":[
+            {
+               "header":"Fundacja “Lorem Ipsum 1”",
+               "subheader":"Quis varius quam quisque id diam vel quam elementum pulvinar.",
+               "desc":"Egestas, sed, tempus"
+            },
+            {
+               "header":"Fundacja “Lorem Ipsum 2”",
+               "subheader":"Hendrerit gravida rutrum quisque non tellus orci ac auctor augue.",
+               "desc":"Ut, aliquam, purus, sit, amet"
+            },
+            {
+               "header":"Fundacja “Lorem Ipsum 3”",
+               "subheader":"Scelerisque in dictum non consectetur a erat nam.",
+               "desc":"Mi, quis, hendrerit, dolor"
+            },
+            {
+               "header":"Fundacja “Lorem Ipsum 4”",
+               "subheader":"Quis varius quam quisque id diam vel quam elementum pulvinar.",
+               "desc":"Egestas, sed, tempus"
+            },
+            {
+               "header":"Fundacja “Lorem Ipsum 5”",
+               "subheader":"Hendrerit gravida rutrum quisque non tellus orci ac auctor augue.",
+               "desc":"Ut, aliquam, purus, sit, amet"
+            },
+            {
+               "header":"Fundacja “Lorem Ipsum 6”",
+               "subheader":"Scelerisque in dictum non consectetur a erat nam.",
+               "desc":"Mi, quis, hendrerit, dolor"
+            },
+            {
+               "header":"Fundacja “Lorem Ipsum 7”",
+               "subheader":"Quis varius quam quisque id diam vel quam elementum pulvinar.",
+               "desc":"Egestas, sed, tempus"
+            },
+            {
+               "header":"Fundacja “Lorem Ipsum 8”",
+               "subheader":"Hendrerit gravida rutrum quisque non tellus orci ac auctor augue.",
+               "desc":"Ut, aliquam, purus, sit, amet"
+            },
+            {
+               "header":"Fundacja “Lorem Ipsum 9”",
+               "subheader":"Scelerisque in dictum non consectetur a erat nam.",
+               "desc":"Mi, quis, hendrerit, dolor"
+            }
+         ]
+      },
+      {
+         "name":"Organizacjom",
+         "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+         "items":[
+            {
+               "header":"Organizacja “Lorem Ipsum 1”",
+               "subheader":"Quis varius quam quisque id diam vel quam elementum pulvinar.",
+               "desc":"Egestas, sed, tempus"
+            },
+            {
+               "header":"Organizacja “Lorem Ipsum 2”",
+               "subheader":"Hendrerit gravida rutrum quisque non tellus orci ac auctor augue.",
+               "desc":"Ut, aliquam, purus, sit, amet"
+            },
+            {
+               "header":"Organizacja “Lorem Ipsum 3”",
+               "subheader":"Scelerisque in dictum non consectetur a erat nam.",
+               "desc":"Mi, quis, hendrerit, dolor"
+            },
+            {
+               "header":"Organizacja “Lorem Ipsum 4”",
+               "subheader":"Quis varius quam quisque id diam vel quam elementum pulvinar.",
+               "desc":"Egestas, sed, tempus"
+            },
+            {
+               "header":"Organizacja “Lorem Ipsum 5”",
+               "subheader":"Hendrerit gravida rutrum quisque non tellus orci ac auctor augue.",
+               "desc":"Ut, aliquam, purus, sit, amet"
+            },
+            {
+               "header":"Organizacja “Lorem Ipsum 6”",
+               "subheader":"Scelerisque in dictum non consectetur a erat nam.",
+               "desc":"Mi, quis, hendrerit, dolor"
+            }
+         ]
+      },
+      {
+         "name":"Lokalnym zbiórkom",
+         "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+         "items":[
+            {
+               "header":"Zbiórka “Lorem Ipsum 1”",
+               "subheader":"Quis varius quam quisque id diam vel quam elementum pulvinar.",
+               "desc":"Egestas, sed, tempus"
+            },
+            {
+               "header":"Zbiórka “Lorem Ipsum 2”",
+               "subheader":"Hendrerit gravida rutrum quisque non tellus orci ac auctor augue.",
+               "desc":"Ut, aliquam, purus, sit, amet"
+            },
+            {
+               "header":"Zbiórka “Lorem Ipsum 3”",
+               "subheader":"Scelerisque in dictum non consectetur a erat nam.",
+               "desc":"Mi, quis, hendrerit, dolor"
+            }
+         ]
+      }
+   ]
+}
