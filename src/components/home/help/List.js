@@ -1,14 +1,8 @@
 
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 
-const item = {
-  groupDescription: 'W naszej bazie znajdziesz listę zweryfikowanych Fundacji, z którymi współpracujemy. Możesz sprawdzić czym się zajmują, komu pomagają i czego potrzebują.',
-  header: 'item header',
-  subheader: 'item subheader',
-  description: 'item description'
-}
+const ListItem = ({item}) => {
 
-const ListItem = () => {
   return (
     <>
       <div className='list-item-container'>
@@ -16,24 +10,53 @@ const ListItem = () => {
           <p>{item.header}</p>
           <p>{item.subheader}</p>
         </div>
-        <div>{item.description}</div>
+        <div>{item.desc}</div>
       </div>
-      <div className='line-bottom' />
+
     </>
   );
 }
 
-const List = () => {
+const List = ({items, description, type}) => {
+
+  const itemsPerPage = 3;
+  const pagesCount = Math.ceil(items?.length / itemsPerPage);
+  const [currentPage, setCurrentPage] = useState(1);
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [type]);
+
+  const getPageNumbers = () => {
+    let pageNumbers = [];
+    if(pagesCount > 1) {
+      for(let i = 1; i <= pagesCount; i++)
+      pageNumbers.push(i);
+    }
+
+    return pageNumbers;
+  }
+
+  const getCurrentItems = () => {
+    const lastIndex = currentPage * itemsPerPage;
+    const firstIndex = lastIndex - itemsPerPage;
+    const currentItems = items?.slice(firstIndex, lastIndex);
+
+    return currentItems;
+  }
+
   return (
     <div className='list-container'>
-      <p>
-        W naszej bazie znajdziesz listę zweryfikowanych Fundacji, z którymi
-        współpracujemy. Możesz sprawdzić czym się zajmują, komu pomagają
-        i czego potrzebują.
-      </p>
-      <ListItem />
-      <ListItem />
-      <ListItem />
+      <p>{description}</p>
+      {getCurrentItems()?.map((item,index) =>
+        <React.Fragment key={item.header}>
+          <ListItem item={item} />
+          {index === items.length - 1 ? null : <div className='line-bottom' />}
+        </React.Fragment>
+      )}
+      <div className='pages-container'>
+        {pagesCount > 1 ? getPageNumbers().map(page => <span onClick={() => setCurrentPage(page)} id={page} key={page}>{page}</span>) : null}
+      </div>
     </div>
   );
 }
