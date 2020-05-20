@@ -1,6 +1,6 @@
 
 import React, {useState, useEffect} from 'react';
-import Divider from '../Divider';
+import Divider from '../../Divider';
 import List from './List';
 
 const Help = () => {

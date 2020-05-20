@@ -1,0 +1,14 @@
+
+.login-container {
+  width: 100vw;
+  height: calc(100vh - 8rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  div {
+    width: 50%;
+    text-align: center;
+    font-size: 4rem;
+  }
+}

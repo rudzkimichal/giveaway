@@ -1,6 +1,6 @@
 
 import React from 'react';
-import Divider from './Divider';
+import Divider from '../Divider';
 import {Formik, Form, Field, ErrorMessage} from 'formik';
 import instagram from '../../assets/Instagram.svg';
 import facebook from '../../assets/Facebook.svg';
@@ -15,7 +15,6 @@ const Contact = () => {
       },
       body: JSON.stringify(data)
     })
-    console.log(data);
 
     return response.json();
   }

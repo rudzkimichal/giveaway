@@ -1,7 +1,7 @@
 
 import React from 'react';
 import {Link} from 'react-router-dom';
-import Divider from '../Divider';
+import Divider from '../../Divider';
 
 const CallToAction = () => {
   return (
