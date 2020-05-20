@@ -29,7 +29,7 @@ const Help = () => {
         <span id='Organizacjom' onClick={handleType} >Organizacjom pozarządowym</span>
         <span id='Lokalnym zbiórkom' onClick={handleType} >Lokalnym zbiórkom</span>
       </div>
-      <List items={getType()?.items} />
+      <List items={getType()?.items} type={handleType} description={getType()?.desc}/>
     </div>
   );
 }

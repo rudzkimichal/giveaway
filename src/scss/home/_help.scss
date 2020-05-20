@@ -52,6 +52,20 @@
     text-align: center;
     margin-bottom: 4rem;
   }
+
+  .pages-container {
+    display: flex;
+    margin-top: 4rem;
+
+    span {
+      padding: 1em;
+      border: 0.75px solid transparent;
+
+      &:hover {
+        border: 0.75px solid $secondary-text-color;
+      }
+    }
+  }
 }
 
 .list-item-container {
