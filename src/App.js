@@ -1,9 +1,24 @@
 import React from 'react';
-import './scss/main.scss';
+import {HashRouter, Route, Switch} from 'react-router-dom';
+import Home from './components/home/Home';
+import Login from './components/Login';
+import Form from './components/Form';
+import Register from './components/Register';
+import Logout from './components/Logout';
+import NotFound from './components/NotFound';
 
-function App() {
+const App = () => {
   return (
-    <h1>Giveaway</h1>
+    <HashRouter>
+      <Switch>
+        <Route exact path='/' component={Home} />
+        <Route path='/logowanie' component={Login} />
+        <Route path='/rejestracja' component={Register} />
+        <Route path='/oddaj-rzeczy' component={Form} />
+        <Route path='/wylogowano' component={Logout} />
+        <Route component={NotFound} />
+      </Switch>
+    </HashRouter>
   );
 }
 

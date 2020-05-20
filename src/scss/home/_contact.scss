@@ -1,0 +1,117 @@
+
+#contact {
+  padding: 6rem 0;
+  height: 1000px;
+  width: 100vw;
+  display: flex;
+
+  > * {
+    width: 50%;
+  }
+
+  .contact-img-container {
+    height: 100%;
+    background: url(../../assets/Background-Contact-Form.jpg);
+    background-size: cover;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(255,255,255,0.8);
+    }
+  }
+
+  .contact-form-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    > *:not(:first-child) {
+      margin-top: 4rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 300;
+      text-align: center;
+    }
+
+    .form {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+
+      .error-message {
+        font-size: 0.5rem;
+        color: red;
+        width: 100%;
+      }
+
+      *::placeholder {
+        color: $primary-color;
+      }
+
+      .input {
+        margin: 1rem 0;
+        width: 100%;
+        border: none;
+        border-bottom: 0.75px solid $secondary-text-color;
+        resize: none;
+
+        &[type='text'], &[type='email'] {
+
+        }
+      }
+
+      section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 2rem;
+
+        * {
+          width: 45%;
+        }
+      }
+
+      button {
+        padding: 1rem;
+        border: 0.75px solid $primary-text-color;
+        background: none;
+        width: 25%;
+        font-size: 1rem;
+        font-weight: 300;
+        align-self: flex-end;
+      }
+    }
+  }
+}
+
+.footer {
+  height: 3em;
+  width: 80vw;
+  margin: 1rem auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  div {
+    width: 5rem;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
