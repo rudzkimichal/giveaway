@@ -48,6 +48,12 @@
       display: flex;
       flex-direction: column;
 
+      .error-message {
+        font-size: 0.5rem;
+        color: red;
+        width: 100%;
+      }
+
       *::placeholder {
         color: $primary-color;
       }
