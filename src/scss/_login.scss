@@ -1,14 +1,80 @@
 
 .login-container {
   width: 100vw;
-  height: calc(100vh - 8rem);
+  min-height: calc(100vh - 7rem);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  div {
-    width: 50%;
-    text-align: center;
-    font-size: 4rem;
+  *:not(:first-child) {
+    margin-top: 2rem;
+  }
+
+  .login-content {
+    width: 33.333%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .input-field {
+        width: 66.67%;
+        min-height: 200px;
+        background: $primary-color;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-weight: 600;
+
+        * {
+          width: 75%;
+          margin: 0;
+
+          &:not(:first-child) {
+            margin-top: 1rem;
+          }
+        }
+
+        .input {
+          background: transparent;
+          border: none;
+          border-bottom: 0.75px solid $secondary-text-color;
+        }
+
+        .error-message {
+          font-size: 0.5rem;
+          color: red;
+        }
+      }
+    }
+
+    .buttons {
+      margin-top: 1rem;
+      width: 90%;
+      display: flex;
+      justify-content: space-between;
+
+      .btn {
+        text-decoration: none;
+        padding: 1rem;
+        margin: 0;
+        color: $primary-text-color;
+        font-size: 1rem;
+        background: transparent;
+        border: 0.75px solid transparent;
+
+        &:hover {
+          border: 0.75px solid $primary-text-color;
+        }
+      }
+    }
   }
 }
