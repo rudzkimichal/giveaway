@@ -1,6 +1,6 @@
 
 import React from 'react';
-import Divider from './Divider';
+import Divider from '../Divider';
 import {Formik, Form, Field, ErrorMessage} from 'formik';
 import instagram from '../../assets/Instagram.svg';
 import facebook from '../../assets/Facebook.svg';
@@ -15,7 +15,6 @@ const Contact = () => {
       },
       body: JSON.stringify(data)
     })
-    console.log(data);
 
     return response.json();
   }
@@ -36,7 +35,7 @@ const Contact = () => {
             if(!values.name)
               errors.name = fieldRequired;
             else if (values.name.includes(' '))
-              errors.name = 'Imię powinno być jednym wyrazem bez spacji';
+              errors.name = 'Dopuszczalny jeden wyraz bez spacji';
 
             if(!values.email)
               errors.email = fieldRequired;
@@ -63,36 +62,36 @@ const Contact = () => {
           }}
         >
           {({isSubmitting}) => (
-          <Form className='form'>
-            <section>
+            <Form className='form'>
+              <section>
+                <div>
+                  <label htmlFor='name'>Wpisz swoje imię</label>
+                  <Field type='text' name='name' className='input' placeholder='Krzysztof' />
+                  <ErrorMessage className='error-message' name='name' component='p' />
+                </div>
+                <div>
+                  <label htmlFor='email'>Wpisz swój email</label>
+                  <Field type='email' name='email' className='input' placeholder='abc@xyz.pl' />
+                  <ErrorMessage className='error-message' name='email' component='p' />
+                </div>
+              </section>
               <div>
-                <label htmlFor='name'>Wpisz swoje imię</label>
-                <Field type='text' name='name' className='input' placeholder='Krzysztof' />
-                <ErrorMessage className='error-message' name='name' component='p' />
+                <label htmlFor='message'>Wpisz swoją wiadomość</label>
+                <Field
+                  name='message'
+                  component='textarea'
+                  rows='5'
+                  className='input'
+                  placeholder='Lorem ipsum dolor sit amet, consectetur adipiscing
+                  elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                  aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.'
+                  />
+                <ErrorMessage className='error-message' name='message' component='p' />
               </div>
-              <div>
-                <label htmlFor='email'>Wpisz swój email</label>
-                <Field type='email' name='email' className='input' placeholder='abc@xyz.pl' />
-                <ErrorMessage className='error-message' name='email' component='p' />
-              </div>
-            </section>
-            <div>
-              <label htmlFor='message'>Wpisz swoją wiadomość</label>
-              <Field
-                name='message'
-                component='textarea'
-                rows='5'
-                className='input'
-                placeholder='Lorem ipsum dolor sit amet, consectetur adipiscing
-                elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                laboris nisi ut aliquip ex ea commodo consequat.'
-                />
-              <ErrorMessage className='error-message' name='message' component='p' />
-            </div>
-            <button type='submit' disabled={isSubmitting}>Wyślij</button>
-          </Form>
-        )}
+              <button type='submit' disabled={isSubmitting}>Wyślij</button>
+            </Form>
+          )}
         </Formik>
       </div>
     </div>

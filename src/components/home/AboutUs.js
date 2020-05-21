@@ -1,6 +1,6 @@
 
 import React from 'react';
-import Divider from './Divider';
+import Divider from '../Divider';
 import signature from '../../assets/Signature.svg';
 
 const AboutUs = () => {
