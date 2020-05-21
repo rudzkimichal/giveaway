@@ -9,7 +9,7 @@
   align-items: center;
 
   *:not(:first-child) {
-    margin-top: 2rem;
+    margin-top: 1rem;
   }
 
   .register-content {
@@ -27,12 +27,13 @@
 
       .input-field {
         width: 66.67%;
-        min-height: 250px;
+        min-height: 220px;
         background: $primary-color;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        font-size: 0.75rem;
         font-weight: 600;
 
         * {
