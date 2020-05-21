@@ -51,7 +51,7 @@ const List = ({items, description, type}) => {
       {getCurrentItems()?.map((item,index) =>
         <React.Fragment key={item.header}>
           <ListItem item={item} />
-          {index === items.length - 1 ? null : <div className='line-bottom' />}
+          {index === getCurrentItems()?.length - 1 ? null : <div className='line-bottom' />}
         </React.Fragment>
       )}
       <div className='pages-container'>
