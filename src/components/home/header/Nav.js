@@ -7,8 +7,8 @@ const Nav = () => {
   return (
     <div className='navbar-container'>
       <div className='navbar-login-container'>
-        <Link to='/logowanie'>Zaloguj</Link>
-        <Link to='/rejestracja'>Załóż konto</Link>
+        <Link to='/logowanie' replace>Zaloguj</Link>
+        <Link to='/rejestracja' replace>Załóż konto</Link>
       </div>
       <nav>
         <Link to='/'>Start</Link>
