@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 import {Formik, Form, Field, ErrorMessage} from 'formik';
 import Divider from './Divider';
 
-const Login = () => {
+const Register = () => {
 
   const createAccount = () => {
     console.log('Submit');
@@ -74,4 +74,4 @@ const Login = () => {
   );
 }
 
-export default Login;
+export default Register;
