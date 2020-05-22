@@ -1,5 +1,5 @@
 import React from 'react';
-import {HashRouter, Route, Switch} from 'react-router-dom';
+import {HashRouter, Route, Switch, useHistory} from 'react-router-dom';
 import Home from './components/home/Home';
 import Nav from './components/home/header/Nav'
 import Login from './components/Login';
@@ -11,7 +11,7 @@ import NotFound from './components/NotFound';
 const App = () => {
   return (
     <HashRouter>
-      <Nav />
+      {}<Nav />
       <Switch>
         <Route exact path='/' component={Home} />
         <Route path='/logowanie' component={Login} />

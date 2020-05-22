@@ -1,13 +1,20 @@
 
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {Link, useHistory} from 'react-router-dom';
 import {Formik, Form, Field, ErrorMessage} from 'formik';
+import firebase from '../db/auth';
 import Divider from './Divider';
 
 const Login = () => {
 
-  const sendCredentials = () => {
-    console.log('Submit');
+  const history = useHistory();
+  
+  const sendCredentials = (email, password) => {
+    firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL)
+    .then(() => firebase.auth().signInWithEmailAndPassword(email, password))
+    .catch(error => console.log(error));
+
+    history.push('/');
   }
 
   return (
@@ -33,8 +40,8 @@ const Login = () => {
 
             return errors;
           }}
-          onSubmit = {(_,{setSubmitting}) => {
-            sendCredentials();
+          onSubmit = {(values,{setSubmitting}) => {
+            sendCredentials(values.email, values.password);
             setSubmitting(false);
           }
         }

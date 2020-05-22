@@ -3,12 +3,15 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import {Formik, Form, Field, ErrorMessage} from 'formik';
+import firebase from '../db/auth';
 import Divider from './Divider';
 
 const Register = () => {
 
-  const createAccount = () => {
-    console.log('Submit');
+  const createUser = (email,password) => {
+
+    firebase.auth().createUserWithEmailAndPassword(email, password)
+    .catch(error => console.log(error));
   }
 
   return (
@@ -18,7 +21,7 @@ const Register = () => {
         <Divider />
         <Formik
           initialValues={{email: '', password: '', repeatPassword: ''}}
-          validate = {values => {
+          validate = {(values) => {
             const errors = {};
             const fieldRequired = 'To pole jest wymagane';
 
@@ -41,8 +44,8 @@ const Register = () => {
 
             return errors;
           }}
-          onSubmit = {(_,{setSubmitting}) => {
-            createAccount();
+          onSubmit = {(values, {setSubmitting}) => {
+            createUser(values.email, values.repeatPassword);
             setSubmitting(false);
           }
         }
